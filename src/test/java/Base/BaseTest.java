@@ -29,7 +29,6 @@ public class BaseTest {
                 System.getProperty("user.dir") + "/src/test/resources/configs/config.properties"
         );
         config.load(fis);
-
         // Initialize driver
         DriverFactory.initDriver(config);
 
