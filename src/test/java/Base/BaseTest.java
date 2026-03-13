@@ -1,7 +1,7 @@
 package Base;
 
 import Pages.LoginPage;
-import Utilities.DriverFactory;
+import Utilities.DriverFactory1;
 import io.appium.java_client.AppiumDriver;
 import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
@@ -30,10 +30,10 @@ public class BaseTest {
         );
         config.load(fis);
         // Initialize driver
-        DriverFactory.initDriver(config);
+        DriverFactory1.initDriver(config);
 
         // Get driver instance
-        driver = DriverFactory.getDriver();
+        driver = DriverFactory1.getDriver();
 
         // Initialize page
         loginPage = new LoginPage(driver, config);
@@ -44,6 +44,6 @@ public class BaseTest {
     public void tearDown() {
 
         // Quit driver
-        DriverFactory.quitDriver();
+        DriverFactory1.quitDriver();
     }
 }
